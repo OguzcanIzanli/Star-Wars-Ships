@@ -1,0 +1,23 @@
+.homepageContainer {
+  background: linear-gradient(
+    45deg,
+    rgba(73, 53, 55, 1) 25%,
+    rgba(18, 21, 36, 1) 100%
+  );
+  min-height: 100vh;
+  text-align: center;
+  min-width: 490px;
+  position: relative;
+}
+
+.starwarsLogo {
+  padding: 20px;
+  width: 400px;
+}
+
+.darthVaderLogo {
+  position: fixed;
+  bottom: 0;
+  width: 15%;
+  right: 0;
+}

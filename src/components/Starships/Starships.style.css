@@ -1,0 +1,51 @@
+.shipContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  gap: 30px;
+}
+
+.shipCard {
+  width: 380px;
+  height: 400px;
+  font-size: 1.3rem;
+  color: var(--color-1);
+  background-color: var(--color-2);
+  border-radius: 50px;
+  text-align: left;
+  padding: 30px 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.shipCard:hover {
+  scale: 1.05;
+  box-shadow: 10px 10px 19px 1px rgba(225, 176, 1, 0.61);
+}
+
+.shipImg {
+  text-align: center;
+}
+
+.shipImg img {
+  width: 100%;
+}
+
+.shipName {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.shipHyperdriveRating,
+.shipModel {
+  font-size: 1.2rem;
+}
+
+.shipHyperdriveRating span,
+.shipModel span {
+  font-weight: 600;
+}
