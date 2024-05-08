@@ -1,6 +1,6 @@
 import "./Homepage.style.css";
-import starwarsLogo from "../../../public/starwars.png";
-import darthVader from "../../../public/darthVader.png";
+import starwarsLogo from "../../../public/images/starwars.png";
+import darthVader from "../../../public/images/darthVader.png";
 
 import Starships from "../../components/Starships/Starships";
 

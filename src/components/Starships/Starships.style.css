@@ -1,13 +1,45 @@
+/* Input  */
+.filterForm {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.inputContainer {
+  border-bottom: 2px solid rgba(225, 176, 1, 0.61);
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+}
+
+.filterForm label {
+  color: var(--color-1);
+  font-size: 1.5rem;
+}
+
+.filterForm input {
+  background-color: #351111;
+  color: var(--color-1);
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+/* Ships  */
 .shipContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
+  padding: 60px 0 20px 0;
   gap: 30px;
 }
 
 .shipCard {
-  width: 380px;
+  width: 320px;
   height: 400px;
   font-size: 1.3rem;
   color: var(--color-1);
@@ -25,6 +57,10 @@
   box-shadow: 10px 10px 19px 1px rgba(225, 176, 1, 0.61);
 }
 
+.shipCard:active {
+  scale: 1.1;
+}
+
 .shipImg {
   text-align: center;
 }
@@ -40,12 +76,66 @@
   padding: 10px 0;
 }
 
-.shipHyperdriveRating,
-.shipModel {
+.shipInfo {
   font-size: 1.2rem;
 }
 
-.shipHyperdriveRating span,
-.shipModel span {
+.shipInfo span {
   font-weight: 600;
+}
+
+/* Loading  */
+
+.loading {
+  height: 60px;
+}
+
+.loading img {
+  height: 60px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Buttons */
+.pageBtns {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pageBtn {
+  width: 120px;
+  height: 55px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.2s;
+  border: none;
+  color: var(--color-1);
+  background-color: var(--color-2);
+  cursor: pointer;
+}
+
+.pageBtn:hover {
+  scale: 1.05;
+  box-shadow: 0px 3px 5px 1px rgba(225, 176, 1, 0.6);
+}
+
+.pageBtn:active {
+  scale: 1.1;
+}
+
+@media (max-width: 576px) {
+  .inputContainer {
+    width: 90%;
+  }
 }

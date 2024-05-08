@@ -6,13 +6,13 @@
   );
   min-height: 100vh;
   text-align: center;
-  min-width: 490px;
+  min-width: 350px;
   position: relative;
+  padding: 40px 0;
 }
 
 .starwarsLogo {
-  padding: 20px;
-  width: 400px;
+  width: 500px;
 }
 
 .darthVaderLogo {
@@ -20,4 +20,10 @@
   bottom: 0;
   width: 15%;
   right: 0;
+}
+
+@media (max-width: 576px) {
+  .starwarsLogo {
+    width: 90%;
+  }
 }
