@@ -3,6 +3,8 @@ import millenniumFalcon from "../../../public/images/millenniumFalcon.png";
 import lightsaber from "../../../public/images/lightsaber.png";
 import useFetch from "../../hooks/useFetch";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useShip } from "../../context/ShipContext";
 
 let initialUrl = "https://swapi.dev/api/starships";
 
@@ -14,6 +16,7 @@ const Starships = () => {
     lessBtn: false,
   });
   const [filterValue, setFilterValue] = useState("");
+  const { setShip } = useShip();
 
   const { data, loading } = useFetch(url);
 
@@ -61,18 +64,20 @@ const Starships = () => {
 
       <div className="shipContainer">
         {filteredStarships.map((ship, index) => (
-          <div key={index} className="shipCard">
-            <div className="shipImg">
-              <img src={millenniumFalcon} alt="Millennium Falcon" />
+          <Link onClick={() => setShip(ship)} key={index} to="/ship">
+            <div className="shipCard">
+              <div className="shipImg">
+                <img src={millenniumFalcon} alt="Millennium Falcon" />
+              </div>
+              <div className="shipName">{ship.name}</div>
+              <div className="shipInfo">
+                <span>Model:</span> {ship.model}
+              </div>
+              <div className="shipInfo">
+                <span>Hyperdrive Rating:</span> {ship.hyperdrive_rating}
+              </div>
             </div>
-            <div className="shipName">{ship.name}</div>
-            <div className="shipInfo">
-              <span>Model:</span> {ship.model}
-            </div>
-            <div className="shipInfo">
-              <span>Hyperdrive Rating:</span> {ship.hyperdrive_rating}
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -99,24 +104,3 @@ const Starships = () => {
 };
 
 export default Starships;
-
-{
-  /* <div key={index} className="shipCard">
-          <div className="shipName">{ship.name}</div>
-          <div className="shipImg">{}</div>
-          <div className="shipModel">Model: {ship.model}</div>
-          <div className="shipHyperdriveRating">
-            Hyperdrive Rating: {ship.hyperdrive_rating}
-          </div>
-          <div className="shipMaxSpeed">
-            Max Atmosphering Speed: {ship.max_atmosphering_speed}
-          </div>
-          <div className="shipManufacturer">
-            Manufacturer: {ship.manufacturer}
-          </div>
-          <div className="shipCrew">Crew: {ship.crew}</div>
-          <div className="shipCargoCapacity">
-            Cargo Capacity: {ship.cargo_capacity}
-          </div>
-        </div> */
-}

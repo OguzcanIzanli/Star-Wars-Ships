@@ -38,6 +38,11 @@
   gap: 30px;
 }
 
+.shipContainer a {
+  border-radius: 50px;
+  text-decoration: none;
+}
+
 .shipCard {
   width: 320px;
   height: 400px;
@@ -72,7 +77,7 @@
 .shipName {
   font-size: 1.4rem;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
   padding: 10px 0;
 }
 
@@ -81,7 +86,7 @@
 }
 
 .shipInfo span {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* Loading  */
