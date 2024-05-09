@@ -41,6 +41,7 @@
 .shipContainer a {
   border-radius: 50px;
   text-decoration: none;
+  z-index: 1;
 }
 
 .shipCard {
@@ -54,7 +55,6 @@
   padding: 30px 30px;
   transition: all 0.3s;
   cursor: pointer;
-  z-index: 1;
 }
 
 .shipCard:hover {
