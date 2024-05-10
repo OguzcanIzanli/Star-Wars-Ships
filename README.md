@@ -21,6 +21,8 @@ Star Wars Ships is a web application that allows users to explore various starsh
 
 You can access the live website [here](https://starwarships.netlify.app/).
 
+https://github.com/OguzcanIzanli/Star-Wars-Ships/assets/95178772/3ffd406b-2baf-4063-85e7-b2f92dd3d970
+
 ## How To Use
 
 To clone and run this application, you'll need [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/en) installed on your computer. From your comment line:
